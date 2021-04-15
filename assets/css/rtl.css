@@ -7,7 +7,7 @@ body.rtl,
 .rtl .user-info {
   font-family: "Cairo", sans-serif !important;
 }
-.rtl {
+.rtl, .rtl .header-dropdown li .dropdown-menu li a {
   direction: rtl;
   text-align: right;
 }
