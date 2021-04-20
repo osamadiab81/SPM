@@ -178,7 +178,10 @@
 .theme-cyan .card .header h2:before {
   background: #00a69c;
 }
-.theme-cyan .card .header h2 strong {
+.form-check-label {
+  color: #667b85;
+}
+.theme-cyan .card .header h2 strong{
   color: #00a69c;
 }
 .theme-cyan .blog-page .single-blog-post .img-holder .date-box {
