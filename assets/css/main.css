@@ -1458,7 +1458,7 @@ fieldset[disabled] .btn-primary.active {
 .show > .btn-success.dropdown-toggle,
 .show > .btn-success.dropdown-toggle:focus,
 .show > .btn-success.dropdown-toggle:hover {
-  background-color: #1beb11;
+  background-color: #00bcd4;
   color: #fff;
   box-shadow: none;
 }
@@ -1500,8 +1500,8 @@ fieldset[disabled] .btn-success.active {
 .btn-success.btn-simple:focus,
 .btn-success.btn-simple:active {
   background-color: rgba(0, 0, 0, 0);
-  color: #1beb11;
-  border-color: #1beb11;
+  color: #00bcd4;
+  border-color: #00bcd4;
   box-shadow: none;
 }
 .btn-success.btn-link {
@@ -1511,7 +1511,7 @@ fieldset[disabled] .btn-success.active {
 .btn-success.btn-link:focus,
 .btn-success.btn-link:active {
   background-color: rgba(0, 0, 0, 0);
-  color: #1beb11;
+  color: #00bcd4;
   text-decoration: none;
   box-shadow: none;
 }
@@ -1810,7 +1810,7 @@ fieldset[disabled] .btn-neutral.active {
 .btn-neutral.btn-success:hover,
 .btn-neutral.btn-success:focus,
 .btn-neutral.btn-success:active {
-  color: #1beb11;
+  color: #00bcd4;
 }
 .btn-neutral.btn-default {
   color: #888;
@@ -2025,12 +2025,7 @@ fieldset[disabled] .btn-link.active {
   outline: 0 !important;
   color: #2c2c2c;
 }
-.form-control:focus + .input-group-addon,
-.form-control:focus ~ .input-group-addon {
-  border: 1px solid #00bcd4 ;
-  border-left: none;
-  background-color: rgba(0, 0, 0, 0);
-}
+
 .has-success .form-control,
 .has-error .form-control,
 .has-success .form-control:focus,
@@ -2064,20 +2059,12 @@ fieldset[disabled] .btn-link.active {
   bottom: -20px;
   vertical-align: middle;
 }
-.form-control + .input-group-addon {
-  background-color: #fff;
-}
-/* .form-control + .input-group-addon:not(:first-child) {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-} */
+
+
 .form-control.show .dropdown-menu {
   top: 50px !important;
 }
-.input-group-addon:first-child {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-}
+
 .has-success:after,
 .has-danger:after {
   font-family: "Material-Design-Iconic-Font";
@@ -2098,95 +2085,27 @@ fieldset[disabled] .btn-link.active {
   content: "\f136";
   color: #ff3636;
 }
-.form-group.form-group-no-border.input-lg .input-group-addon,
-.input-group.form-group-no-border.input-lg .input-group-addon {
-  padding: 15px 0 15px 19px;
-}
+
 .form-group.form-group-no-border.input-lg .form-control,
 .input-group.form-group-no-border.input-lg .form-control {
   padding: 15px 19px;
 }
-.form-group.form-group-no-border.input-lg .form-control + .input-group-addon,
-.input-group.form-group-no-border.input-lg .form-control + .input-group-addon {
-  padding: 15px 19px 15px 0;
-}
+
 .form-group.input-lg .form-control,
 .input-group.input-lg .form-control {
   padding: 14px 18px;
 }
-.form-group.input-lg .form-control + .input-group-addon,
-.input-group.input-lg .form-control + .input-group-addon {
-  padding: 14px 18px 14px 0;
-}
-.form-group.input-lg .input-group-addon,
-.input-group.input-lg .input-group-addon {
-  padding: 14px 0 15px 18px;
-}
-.form-group.input-lg .input-group-addon + .form-control,
-.input-group.input-lg .input-group-addon + .form-control {
-  padding: 15px 18px 15px 16px;
-}
+
+
 .form-group.form-group-no-border .form-control,
 .input-group.form-group-no-border .form-control {
   padding: 11px 19px;
-}
-.form-group.form-group-no-border .form-control + .input-group-addon,
-.input-group.form-group-no-border .form-control + .input-group-addon {
-  padding: 11px 19px 11px 0;
-}
-.form-group.form-group-no-border .input-group-addon,
-.input-group.form-group-no-border .input-group-addon {
-  padding: 11px 0 11px 19px;
 }
 .form-group .form-control,
 .input-group .form-control {
   padding: 10px 18px 10px 18px;
 }
-.form-group .form-control + .input-group-addon,
-.input-group .form-control + .input-group-addon {
-  padding: 10px 18px 10px 0;
-}
-.form-group .input-group-addon,
-.input-group .input-group-addon {
-  padding: 10px 0 10px 18px;
-}
-.form-group .input-group-addon + .form-control,
-.form-group .input-group-addon ~ .form-control,
-.input-group .input-group-addon + .form-control,
-.input-group .input-group-addon ~ .form-control {
-  padding: 10px 19px 11px 16px;
-}
-.form-group.form-group-no-border .form-control,
-.form-group.form-group-no-border .form-control + .input-group-addon,
-.input-group.form-group-no-border .form-control,
-.input-group.form-group-no-border .form-control + .input-group-addon {
-  background-color: rgba(222, 222, 222, 0.3);
-  border: medium none;
-}
-.form-group.form-group-no-border .form-control:focus,
-.form-group.form-group-no-border .form-control:active,
-.form-group.form-group-no-border .form-control:active,
-.form-group.form-group-no-border .form-control + .input-group-addon:focus,
-.form-group.form-group-no-border .form-control + .input-group-addon:active,
-.form-group.form-group-no-border .form-control + .input-group-addon:active,
-.input-group.form-group-no-border .form-control:focus,
-.input-group.form-group-no-border .form-control:active,
-.input-group.form-group-no-border .form-control:active,
-.input-group.form-group-no-border .form-control + .input-group-addon:focus,
-.input-group.form-group-no-border .form-control + .input-group-addon:active,
-.input-group.form-group-no-border .form-control + .input-group-addon:active {
-  border: medium none;
-  background-color: rgba(222, 222, 222, 0.5);
-}
-.form-group.form-group-no-border .form-control:focus + .input-group-addon,
-.input-group.form-group-no-border .form-control:focus + .input-group-addon {
-  background-color: rgba(222, 222, 222, 0.5);
-}
-.form-group.form-group-no-border .input-group-addon,
-.input-group.form-group-no-border .input-group-addon {
-  background-color: rgba(222, 222, 222, 0.3);
-  border: none;
-}
+
 .has-error .form-control-feedback,
 .has-error .control-label {
   color: #ff3636;
@@ -2200,67 +2119,12 @@ label {
 .has-success .control-label {
   color: #088e50;
 }
-.input-group-addon {
-  background-color: #fff;
-  /* border: 1px solid #e3e3e3;
-  border-radius: 30px; */
-  color: #555;
-  padding: -0.5rem 0 -0.5rem -0.3rem;
-  -webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out;
-  -moz-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out;
-  -o-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out;
-  -ms-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out;
-}
-.has-success .input-group-addon,
-.has-danger .input-group-addon {
-  background-color: #fff;
-}
-.has-danger .form-control:focus + .input-group-addon {
-  color: #ff3636;
-}
-.has-success .form-control:focus + .input-group-addon {
-  color: #088e50;
-}
-.input-group-addon + .form-control,
-.input-group-addon ~ .form-control {
-  padding: -0.5rem 0.7rem;
-  padding-left: 18px;
-}
-.input-group-addon i {
-  width: 17px;
-}
-.input-group-focus .input-group-addon {
-  background-color: #fff;
-  border-color: #f96332;
-}
-.input-group-focus.form-group-no-border .input-group-addon {
-  background-color: rgba(222, 222, 222, 0.5);
-}
+
 .input-group,
 .form-group {
   margin-bottom: 10px;
 }
-.input-group[disabled] .input-group-addon {
-  background-color: #e3e3e3;
-}
-/* .input-group .form-control:first-child,
-.input-group-addon:first-child,
-.input-group-btn:first-child > .dropdown-toggle,
-.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
-  border-right: 0 none;
-}
-.input-group .form-control:last-child,
-.input-group-addon:last-child,
-.input-group-btn:last-child > .dropdown-toggle,
-.input-group-btn:first-child > .btn:not(:first-child) {
-  border-left: 0 none;
-} */
+
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {
@@ -4487,16 +4351,7 @@ img {
 .authentication .card-plain.card-plain .has-danger .form-control {
   background-color: rgba(0, 0, 0, 0);
 }
-.authentication .card-plain.card-plain .input-group-addon {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 0.5);
-  color: #fff;
-}
-.authentication .card-plain.card-plain .input-group-focus .input-group-addon {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: #fff;
-  color: #fff;
-}
+
 .authentication
   .card-plain.card-plain
   .form-group.form-group-no-border
@@ -4535,98 +4390,7 @@ img {
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
-.authentication
-  .card-plain.card-plain
-  .form-group.form-group-no-border
-  .form-control
-  + .input-group-addon,
-.authentication
-  .card-plain.card-plain
-  .input-group.form-group-no-border
-  .form-control
-  + .input-group-addon {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.authentication
-  .card-plain.card-plain
-  .form-group.form-group-no-border
-  .form-control
-  + .input-group-addon:focus,
-.authentication
-  .card-plain.card-plain
-  .form-group.form-group-no-border
-  .form-control
-  + .input-group-addon:active,
-.authentication
-  .card-plain.card-plain
-  .form-group.form-group-no-border
-  .form-control
-  + .input-group-addon:active,
-.authentication
-  .card-plain.card-plain
-  .input-group.form-group-no-border
-  .form-control
-  + .input-group-addon:focus,
-.authentication
-  .card-plain.card-plain
-  .input-group.form-group-no-border
-  .form-control
-  + .input-group-addon:active,
-.authentication
-  .card-plain.card-plain
-  .input-group.form-group-no-border
-  .form-control
-  + .input-group-addon:active {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-.authentication
-  .card-plain.card-plain
-  .form-group.form-group-no-border
-  .form-control:focus
-  + .input-group-addon,
-.authentication
-  .card-plain.card-plain
-  .input-group.form-group-no-border
-  .form-control:focus
-  + .input-group-addon {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-.authentication
-  .card-plain.card-plain
-  .form-group.form-group-no-border
-  .input-group-addon,
-.authentication
-  .card-plain.card-plain
-  .input-group.form-group-no-border
-  .input-group-addon {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: #fff;
-}
-.authentication
-  .card-plain.card-plain
-  .form-group.form-group-no-border.input-group-focus
-  .input-group-addon,
-.authentication
-  .card-plain.card-plain
-  .input-group.form-group-no-border.input-group-focus
-  .input-group-addon {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-.authentication .card-plain.card-plain .input-group-addon,
-.authentication
-  .card-plain.card-plain
-  .form-group.form-group-no-border
-  .input-group-addon,
-.authentication
-  .card-plain.card-plain
-  .input-group.form-group-no-border
-  .input-group-addon {
-  color: rgba(255, 255, 255, 0.5);
-}
+
 .authentication .link {
   font-size: 12px;
   color: #fff;
@@ -4987,16 +4751,7 @@ img {
 [data-background-color] .has-danger .form-control {
   background-color: rgba(0, 0, 0, 0);
 }
-[data-background-color] .input-group-addon {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(255, 255, 255, 0.5);
-  color: #fff;
-}
-[data-background-color] .input-group-focus .input-group-addon {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: #fff;
-  color: #fff;
-}
+
 [data-background-color] .form-group.form-group-no-border .form-control,
 [data-background-color] .input-group.form-group-no-border .form-control {
   background-color: rgba(255, 255, 255, 0.1);
@@ -5011,74 +4766,8 @@ img {
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
-[data-background-color]
-  .form-group.form-group-no-border
-  .form-control
-  + .input-group-addon,
-[data-background-color]
-  .input-group.form-group-no-border
-  .form-control
-  + .input-group-addon {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-[data-background-color]
-  .form-group.form-group-no-border
-  .form-control
-  + .input-group-addon:focus,
-[data-background-color]
-  .form-group.form-group-no-border
-  .form-control
-  + .input-group-addon:active,
-[data-background-color]
-  .form-group.form-group-no-border
-  .form-control
-  + .input-group-addon:active,
-[data-background-color]
-  .input-group.form-group-no-border
-  .form-control
-  + .input-group-addon:focus,
-[data-background-color]
-  .input-group.form-group-no-border
-  .form-control
-  + .input-group-addon:active,
-[data-background-color]
-  .input-group.form-group-no-border
-  .form-control
-  + .input-group-addon:active {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-[data-background-color]
-  .form-group.form-group-no-border
-  .form-control:focus
-  + .input-group-addon,
-[data-background-color]
-  .input-group.form-group-no-border
-  .form-control:focus
-  + .input-group-addon {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-[data-background-color] .form-group.form-group-no-border .input-group-addon,
-[data-background-color] .input-group.form-group-no-border .input-group-addon {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: none;
-  color: #fff;
-}
-[data-background-color]
-  .form-group.form-group-no-border.input-group-focus
-  .input-group-addon,
-[data-background-color]
-  .input-group.form-group-no-border.input-group-focus
-  .input-group-addon {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-[data-background-color] .input-group-addon,
-[data-background-color] .form-group.form-group-no-border .input-group-addon,
-[data-background-color] .input-group.form-group-no-border .input-group-addon {
-  color: rgba(255, 255, 255, 0.8);
-}
+
+
 [data-background-color] .btn.btn-simple {
   background-color: rgba(0, 0, 0, 0);
   border-color: rgba(255, 255, 255, 0.5);
@@ -13008,16 +12697,8 @@ img {
   color: #424242;
   border-right: none;
 }
-.navbar-nav.navbar-left .input-group .form-control:focus ~ .input-group-addon {
-  border: 1px solid #fff;
-  background-color: #fff;
-  border-left: none;
-  color: #424242;
-}
-.navbar-nav.navbar-left .input-group .input-group-addon {
-  background-color: transparent;
-  color: #fff;
-}
+
+
 .navbar-nav.navbar-right {
   float: right;
 }
