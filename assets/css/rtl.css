@@ -4,7 +4,8 @@ body.rtl,
 .m-r-10,
 .right-sidebar .right_chat .media .media-object,
 .chat-widget .chat-scroll-list,
-.rtl .user-info {
+.rtl .user-info,
+.rtl .sidebar {
   font-family: "Cairo", sans-serif !important;
 }
 .rtl, .rtl .header-dropdown li .dropdown-menu li a {
@@ -143,7 +144,7 @@ body.rtl,
   border-left: 1px solid #eee;
   border-right: none;
 }
-.rtl .widget_2 li .text-right {
+.rtl .widget_2 li h5 {
   text-align: left !important;
 }
 .rtl .widget_2 li .text-small {

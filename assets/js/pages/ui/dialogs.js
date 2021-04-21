@@ -63,20 +63,20 @@ function showConfirmMessage() {
 
 function showCancelMessage() {
     swal({
-        title: "Are you sure?",
-        text: "You will not be able to recover this imaginary file!",
+        title: "هل أنت متأكد",
+        // text: "You will not be able to recover this imaginary file!",
         type: "warning",
         showCancelButton: true,
         confirmButtonColor: "#DD6B55",
-        confirmButtonText: "Yes, delete it!",
-        cancelButtonText: "No, cancel plx!",
+        confirmButtonText: "نعم !",
+        cancelButtonText: "لا ! ",
         closeOnConfirm: false,
         closeOnCancel: false
     }, function (isConfirm) {
         if (isConfirm) {
-            swal("Deleted!", "Your imaginary file has been deleted.", "success");
+            swal("تمت !", "تمت تنفيذ طلبك بنجاح", "success");
         } else {
-            swal("Cancelled", "Your imaginary file is safe :)", "error");
+            swal("إلغاء", "لم يتم  :)", "error");
         }
     });
 }

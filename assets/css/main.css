@@ -2019,7 +2019,7 @@ fieldset[disabled] .btn-link.active {
   border-color: #e3e3e3;
 }
 .form-control:focus {
-  border: 1px solid #f96332;
+  border: 1px solid #00bcd4 ;
   -webkit-box-shadow: none;
   box-shadow: none;
   outline: 0 !important;
@@ -2027,7 +2027,7 @@ fieldset[disabled] .btn-link.active {
 }
 .form-control:focus + .input-group-addon,
 .form-control:focus ~ .input-group-addon {
-  border: 1px solid #f96332;
+  border: 1px solid #00bcd4 ;
   border-left: none;
   background-color: rgba(0, 0, 0, 0);
 }
@@ -2193,7 +2193,7 @@ fieldset[disabled] .btn-link.active {
 }
 label {
   font-size: 12px;
-  color: #7f9199;
+  color: #00bcd4;
   font-weight: bold;
 }
 .has-success .form-control-feedback,
