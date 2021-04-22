@@ -14121,6 +14121,7 @@ img {
 .inbox-widget .inbox-inner .inbox-item-info .author,
 .inbox-widget .inbox-inner .inbox-item-info .inbox-message,
 .members_profiles .table,
+.project_profiles .table,
 .profile_state li h4,
 .social_media_table .table,
 .new_friend_list,
@@ -14160,6 +14161,7 @@ img {
 }
 .m-t-10,
 .member-card .social-links,
+.prject-card .social-links,
 .profile_state li h4,
 .w_calender span + span {
   margin-top: 10px;
@@ -14989,7 +14991,7 @@ section.content {
 .weather .days li,
 .weather2 .days-list .day,
 .product-report .icon,
-.member-card,
+.member-card,.project-card,
 .profile_state li,
 .social_icon,
 .new_friend_list li,
@@ -15621,6 +15623,7 @@ section.content {
 .agent .agent-content .social-icons li,
 .agent .agent-content .social-icons li a,
 .member-card .social-links li,
+.project-card .social-links li,
 .social_icon,
 .w_calender ul li,
 .c_list .checkbox,
@@ -15649,6 +15652,7 @@ section.content {
 .inbox-widget .inbox-inner:hover .hover_action,
 .inbox-widget .inbox-inner .inbox-item-info .inbox-message,
 .member-card .text-pink,
+.project-card .text-pink,
 .social_media_table .list-name,
 .new_friend_list li .join_date,
 .w_calender span,
@@ -18955,23 +18959,25 @@ section.content {
   white-space: nowrap;
 }
 .members_profiles .table tbody tr td,
-.members_profiles .table tbody th td {
+.members_profiles .table tbody th td,
+.project_profiles .table tbody tr td,
+.project_profiles .table tbody th td {
   padding: 10px;
   vertical-align: middle;
 }
 .member-card .header {
   min-height: 150px;
 }
-.member-card .member-img {
+.member-card .member-img , .project-card .project-img{
   position: relative;
   margin-top: -70px;
 }
-.member-card .member-img img {
+.member-card .member-img img, .project-card .project-img img {
   width: 150px;
   border: 3px solid #fff;
   box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
 }
-.member-card .social-links li a {
+.member-card .social-links li a, .project-card .social-links li a {
   padding: 5px 10px;
 }
 .social-widget .text {
@@ -19178,7 +19184,7 @@ section.content {
   }
 }
 @media only screen and (max-width: 767px) {
-  .member-card .s-profile {
+  .member-card .s-profile, .project-card .s-profile {
     text-align: center;
   }
   .profile_state li {
