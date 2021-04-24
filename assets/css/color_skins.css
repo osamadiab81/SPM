@@ -48,9 +48,9 @@
   border: 2px solid #00bcd4;
   transition: all 150ms linear;
 }
-.theme-cyan .nav-tabs .nav-link.active {
+/* .theme-cyan .nav-tabs .nav-link.active {
   border: 1px solid #00bcd4 !important;
-}
+} */
 .theme-cyan .card .header h2:before {
   background: #00a69c;
 }

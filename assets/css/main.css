@@ -7,6 +7,9 @@
     url(https://fonts.gstatic.com/s/materialicons/v19/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2)
       format("woff2");
 }
+.error {
+  color: red;
+}
 .material-icons {
   font-family: "Material Icons";
   font-weight: normal;
@@ -2103,7 +2106,7 @@ fieldset[disabled] .btn-link.active {
 }
 .form-group .form-control,
 .input-group .form-control {
-  padding: 10px 18px 10px 18px;
+  padding: 10px 30px 10px 18px;
 }
 
 .has-error .form-control-feedback,
@@ -2880,10 +2883,10 @@ body {
 .nav-tabs > .nav-item > .nav-link:hover {
   background-color: rgba(0, 0, 0, 0);
 }
-.nav-tabs > .nav-item > .nav-link.active {
+/* .nav-tabs > .nav-item > .nav-link.active {
   border: 1px solid #888;
   border-radius: 30px;
-}
+} */
 .nav-tabs > .nav-item > .nav-link i.now-ui-icons {
   font-size: 14px;
   position: relative;
@@ -13443,7 +13446,7 @@ img {
   border-radius: 50%;
   vertical-align: bottom !important;
   border: 3px solid #fff;
-  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 10px 0px rgb(0 0 0 / 20%);
 }
 .sidebar .user-info .detail h4 {
   font-size: 20px;
@@ -13743,7 +13746,7 @@ img {
   border-radius: 50px;
 }
 .menu_dark .sidebar {
-  background: #212121;
+  background: #032c32;
 }
 .menu_dark .sidebar .user-info {
   border-bottom: 1px solid #37474f;
@@ -13758,7 +13761,7 @@ img {
   color: #78909c;
 }
 .menu_dark .navbar-header {
-  background: #212121;
+  background: #032c32;
 }
 @media (max-width: 1169px) {
   .sidebar {
@@ -14477,9 +14480,7 @@ img {
 .m-b-125 {
   margin-bottom: 125px;
 }
-.margin-0,
-.card .header .header-dropdown,
-.card .header h2,
+.margin-0, .header-dropdown,
 .media .media-body .media-heading,
 .dropdown-menu ul.menu .menu-info h4,
 .dropdown-menu ul.menu .menu-info p,
@@ -16087,7 +16088,7 @@ section.content {
 }
 .card .header {
   color: #424242;
-  padding: 20px;
+  padding: 5px;
   position: relative;
   box-shadow: none;
 }
@@ -16501,7 +16502,7 @@ section.content {
 }
 .bootstrap-select .bs-searchbox {
   position: relative;
-  padding: 10px;
+  padding-right: 10px;
 }
 .bootstrap-select .bs-searchbox:after {
   content: "\f1c3";
@@ -18460,18 +18461,18 @@ section.content {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
-  border-radius: 0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   -ms-box-shadow: none;
   box-shadow: none;
-  border: none;
   font-size: 12px;
-  border-bottom: 1px solid #ddd;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
 }
 .dataTables_wrapper input[type="search"]:focus,
 .dataTables_wrapper input[type="search"]:active {
-  border-bottom: 2px solid #1f91f3;
+  border: 1px solid #acb2b9;
+  border-radius: .25rem;
 }
 .dataTables_wrapper .dt-buttons {
   float: left;

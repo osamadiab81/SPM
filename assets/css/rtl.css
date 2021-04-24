@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Cairo:400,600,700");
 body.rtl,
 .rtl.authentication .col-md-12,
-.m-r-10,
+.m-r-5,
 .right-sidebar .right_chat .media .media-object,
 .chat-widget .chat-scroll-list,
 .rtl .user-info,
-.rtl .sidebar {
+.rtl .sidebar,
+.rtl .progress-container.progress-info .progress-value,
+.rtl .progress-container.progress-info .progress-badge,
+.rtl .dropdown-menu .header ,
+.rtl .navbar a:not(.btn):not(.dropdown-item){
   font-family: "Cairo", sans-serif !important;
 }
 .rtl, .rtl .header-dropdown li .dropdown-menu li a {
@@ -26,6 +30,9 @@ body.rtl,
 }
 .rtl.ls-toggle-menu .sidebar {
   margin-right: -300px;
+}
+.rtl select {
+direction: ltr i !important;
 }
 .rtl.ls-toggle-menu section.content {
   margin-right: 0px;

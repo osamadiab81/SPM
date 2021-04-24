@@ -7,6 +7,7 @@ select.selectpicker {
   width: 220px \0;
   /*IE9 and below*/
 }
+
 .bootstrap-select > .dropdown-toggle {
   position: relative;
   width: 100%;
@@ -173,13 +174,13 @@ select.selectpicker {
   padding-left: inherit;
   height: 100%;
   width: 100%;
-  text-align: left;
+  text-align: inherit;
 }
 .bootstrap-select .dropdown-toggle .filter-option-inner {
   padding-right: inherit;
 }
 .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
-  overflow: hidden;
+  overflow: inherit;
 }
 .bootstrap-select .dropdown-toggle .caret {
   position: absolute;
@@ -223,6 +224,7 @@ select.selectpicker {
   cursor: not-allowed;
 }
 .bootstrap-select .dropdown-menu li a {
+  text-align: right;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -273,10 +275,12 @@ select.selectpicker {
 .bootstrap-select.fit-width .dropdown-toggle .filter-option-inner,
 .bootstrap-select.fit-width .dropdown-toggle .filter-option-inner-inner {
   display: inline;
+  
 }
 .bootstrap-select.fit-width .dropdown-toggle .caret {
   position: static;
   top: auto;
+  
   margin-top: -1px;
 }
 .bootstrap-select.show-tick .dropdown-menu .selected span.check-mark {
@@ -335,14 +339,17 @@ select.selectpicker {
   top: -4px;
   border-top: 6px solid white;
   border-bottom: 0;
+
 }
 .bootstrap-select.show-menu-arrow.pull-right .dropdown-toggle .filter-option:before {
   right: 12px;
   left: auto;
+
 }
 .bootstrap-select.show-menu-arrow.pull-right .dropdown-toggle .filter-option:after {
   right: 13px;
   left: auto;
+  
 }
 .bootstrap-select.show-menu-arrow.open > .dropdown-toggle .filter-option:before,
 .bootstrap-select.show-menu-arrow.show > .dropdown-toggle .filter-option:before,

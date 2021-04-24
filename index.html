@@ -1,979 +1,768 @@
 ﻿<!DOCTYPE html>
 <html class="no-js" lang="en">
+
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-      name="viewport"
-    />
-    <meta
-      name="description"
-      content="Responsive Bootstrap 4 and web Application ui kit."
-    />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <meta name="description" content="نظام إدارة المشاريع بمنطقة مكة المكرمة" />
     <title>نظام إدارة المشاريع</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <!-- Favicon-->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
+    <!-- JQuery DataTable Css -->
+    <link rel="stylesheet" href="assets/plugins/jquery-datatable/dataTables.bootstrap4.min.css">
     <!-- Custom Css -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/color_skins.css" />
     <link rel="stylesheet" href="assets/css/rtl.css" />
     <link rel="stylesheet" href="assets/plugins/sweetalert/sweetalert.css" />
     <link rel="stylesheet" href="assets/plugins/bootstrap-select/css/bootstrap-select.css" />
+    <!-- Range Slider Css -->
+    <link rel="stylesheet" href="assets/plugins/ion-rangeslider/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="assets/plugins/ion-rangeslider/css/ion.rangeSlider.skinFlat.css" />
+  
   </head>
 
-  <body class="theme-cyan rtl menu_dark">
-    <!-- Page Loader -->
-    <div class="page-loader-wrapper">
-      <div class="loader">
-        <div class="m-t-30">
-          <img
-            class="zmdi-hc-spin"
-            src="assets/images/logo.svg"
-            width="48"
-            height="48"
-            alt="Compass"
-          />
-        </div>
-        <p>نرجو الإنتظار ...</p>
+<body class="theme-cyan menu_dark rtl">
+  <!-- Page Loader -->
+  <div class="page-loader-wrapper">
+    <div class="loader">
+      <div class="m-t-30">
+        <img class="zmdi-hc-spin" src="assets/images/loader.svg" width="48" height="48" alt="logo" />
       </div>
+      <p>نرجو الإنتظار ...</p>
     </div>
-    <!-- Overlay For Sidebars -->
-    <div class="overlay"></div>
-    <!-- Top Bar -->
-    <nav class="navbar">
-      <div class="col-12">
-        <div class="navbar-header">
-          <a href="javascript:void(0);" class="bars"></a>
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo.svg" width="30" alt="Compass" />
-            <span class="m-r-10">نظام إدارة المشاريع</span>
-          </a>
-        </div>
-        <ul class="nav navbar-nav navbar-left">
-          <li>
-            <a
-              href="javascript:void(0);"
-              class="ls-toggle-btn"
-              data-close="true"
-              ><i class="zmdi zmdi-swap"></i
-            ></a>
-          </li>
-          <li class="hidden-sm-down">
-            <div class="input-group">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="البحث ...."
-              />
-            </div>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a
-              href="javascript:void(0);"
-              class="dropdown-toggle"
-              data-toggle="dropdown"
-              role="button"
-              ><i class="zmdi zmdi-notifications"></i>
-              <div class="notify">
-                <span class="heartbit"></span><span class="point"></span>
-              </div>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-right slideDown">
-              <li class="header">التنبيهات</li>
-              <li class="body">
-                <ul class="menu list-unstyled">
-                  <li>
-                    <a href="javascript:void(0);">
-                      <div class="icon-circle bg-blue">
-                        <i class="zmdi zmdi-account"></i>
-                      </div>
-                      <div class="menu-info">
-                        <h4>إضافة بالمشروع الأول</h4>
-                        <p><i class="zmdi zmdi-time"></i> منذ 14 دقيقة</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);">
-                      <div class="icon-circle bg-amber">
-                        <i class="zmdi zmdi-collection-bookmark"></i>
-                      </div>
-                      <div class="menu-info">
-                        <h4>تعديل بالمشروع الأول</h4>
-                        <p><i class="zmdi zmdi-time"></i> منذ 24 دقيقة</p>
-                      </div>
-                    </a>
-                  </li>
+  </div>
+  <!-- Overlay For Sidebars -->
+  <div class="overlay"></div>
+  <!-- Top Bar -->
+  <nav class="navbar">
+    <div class="col-12">
+      <div class="navbar-header">
+        <a href="javascript:void(0);" class="bars"></a>
+        <a class="navbar-brand" href="index.html">
+          <span class="m-r-5">نظام إدارة المشاريع</span>
 
-                  <li>
-                    <a href="javascript:void(0);">
-                      <div class="icon-circle bg-green">
-                        <i class="zmdi zmdi-edit"></i>
-                      </div>
-                      <div class="menu-info">
-                        <h4>تعديل بالمشروع رقم 2</h4>
-                        <p><i class="zmdi zmdi-time"></i> منذ 24 دقيقة</p>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="footer">
-                <a href="javascript:void(0);">مشاهدة كل التنبيهات</a>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a
-              href="javascript:void(0);"
-              class="dropdown-toggle"
-              data-toggle="dropdown"
-              role="button"
-              ><i class="zmdi zmdi-flag"></i>
-              <div class="notify">
-                <span class="heartbit"></span><span class="point"></span>
-              </div>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-right slideDown">
-              <li class="header">المهام</li>
-              <li class="body">
-                <ul class="menu tasks list-unstyled">
-                  <li>
-                    <a href="javascript:void(0);">
-                      <div class="progress-container progress-info">
-                        <span class="progress-badge">المهمة رقم 1</span>
-                        <div class="progress">
-                          <div
-                            class="progress-bar progress-bar-warning"
-                            role="progressbar"
-                            aria-valuenow="35"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                            style="width: 35%"
-                          >
-                            <span class="progress-value">35%</span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);">
-                      <div class="progress-container progress-info">
-                        <span class="progress-badge">المهمة رقم 2</span>
-                        <div class="progress">
-                          <div
-                            class="progress-bar progress-bar-warning"
-                            role="progressbar"
-                            aria-valuenow="35"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                            style="width: 35%"
-                          >
-                            <span class="progress-value">35%</span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);">
-                      <div class="progress-container progress-info">
-                        <span class="progress-badge">المهمة رقم 3</span>
-                        <div class="progress">
-                          <div
-                            class="progress-bar progress-bar-warning"
-                            role="progressbar"
-                            aria-valuenow="35"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                            style="width: 35%"
-                          >
-                            <span class="progress-value">35%</span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript:void(0);">
-                      <div class="progress-container progress-info">
-                        <span class="progress-badge">المهمة رقم 4</span>
-                        <div class="progress">
-                          <div
-                            class="progress-bar progress-bar-warning"
-                            role="progressbar"
-                            aria-valuenow="35"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                            style="width: 35%"
-                          >
-                            <span class="progress-value">35%</span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="footer">
-                <a href="javascript:void(0);">مشاهدة الكل</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="javascript:void(0);"
-              class="fullscreen hidden-sm-down"
-              data-provide="fullscreen"
-              data-close="true"
-              ><i class="zmdi zmdi-fullscreen"></i
-            ></a>
-          </li>
-          <li>
-            <a href="sign-in.html" class="mega-menu" data-close="true"
-              ><i class="zmdi zmdi-power"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="javascript:void(0);"
-              class="js-right-sidebar"
-              data-close="true"
-              ><i class="zmdi zmdi-settings zmdi-hc-spin"></i
-            ></a>
-          </li>
-        </ul>
+          <img src="assets/images/logo.svg" width="50" alt="logo" />
+        </a>
       </div>
-    </nav>
-
-    <!-- Left Sidebar -->
-    <aside id="leftsidebar" class="sidebar">
-      <div class="menu">
-        <ul class="list">
-          <li>
-            <div class="user-info">
-              <div class="image">
-                <a href="profile.html"
-                  ><img src="assets/images/profile_av.jpg" alt="User"
-                /></a>
-              </div>
-              <div class="detail">
-                <h4>محمد إبراهيم</h4>
-                <small>مقاول عام</small>
-              </div>
-              <a href="events.html" title="Events"
-                ><i class="zmdi zmdi-calendar"></i
-              ></a>
-              <a href="mail-inbox.html" title="Inbox"
-                ><i class="zmdi zmdi-email"></i
-              ></a>
-              <a href="contact.html" title="Contact List"
-                ><i class="zmdi zmdi-account-box-phone"></i
-              ></a>
-              <a href="chat.html" title="Chat App"
-                ><i class="zmdi zmdi-comments"></i
-              ></a>
-              <a href="sign-in.html" title="Sign out"
-                ><i class="zmdi zmdi-power"></i
-              ></a>
-            </div>
-          </li>
-          <li class="active"><a href="index.html" class=" waves-effect waves-block"><i class="zmdi zmdi-accounts"></i><span>المستخدمين</span> </a> </li>
-          <li><a href="projects.html" class=" waves-effect waves-block"><i class="zmdi zmdi-apps"></i><span>المشاريع</span> </a> </li>
-          <li>
-            <a href="javascript:void(0);" class="menu-toggle"
-              ><i class="zmdi zmdi-apps"></i><span>App</span>
-            </a>
-            <ul class="ml-menu">
-              <li><a href="mail-inbox.html">Inbox</a></li>
-              <li><a href="chat.html">Chat</a></li>
-              <li><a href="events.html">Calendar</a></li>
-              <li><a href="file-dashboard.html">File Manager</a></li>
-              <li><a href="contact.html">Contact list</a></li>
-              <li><a href="blog-dashboard.html">Blog</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="menu-toggle"
-              ><i class="zmdi zmdi-swap-alt"></i
-              ><span>User Interface (UI)</span>
-            </a>
-            <ul class="ml-menu">
-              <li><a href="ui_kit.html">UI KIT</a></li>
-              <li><a href="alerts.html">Alerts</a></li>
-              <li><a href="collapse.html">Collapse</a></li>
-              <li><a href="colors.html">Colors</a></li>
-              <li><a href="dialogs.html">Dialogs</a></li>
-              <li><a href="icons.html">Icons</a></li>
-              <li><a href="list-group.html">List Group</a></li>
-              <li><a href="media-object.html">Media Object</a></li>
-              <li><a href="modals.html">Modals</a></li>
-              <li><a href="notifications.html">Notifications</a></li>
-              <li><a href="progressbars.html">Progress Bars</a></li>
-              <li><a href="range-sliders.html">Range Sliders</a></li>
-              <li><a href="sortable-nestable.html">Sortable & Nestable</a></li>
-              <li><a href="tabs.html">Tabs</a></li>
-              <li><a href="waves.html">Waves</a></li>
-            </ul>
-          </li>
-          <li class="header">FORMS, CHARTS, TABLES</li>
-          <li>
-            <a href="javascript:void(0);" class="menu-toggle"
-              ><i class="zmdi zmdi-assignment"></i><span>Forms</span>
-            </a>
-            <ul class="ml-menu">
-              <li>
-                <a href="basic-form-elements.html">Basic Form Elements</a>
-              </li>
-              <li>
-                <a href="advanced-form-elements.html">Advanced Form Elements</a>
-              </li>
-              <li><a href="form-examples.html">Form Examples</a></li>
-              <li><a href="form-validation.html">Form Validation</a></li>
-              <li><a href="form-wizard.html">Form Wizard</a></li>
-              <li><a href="form-editors.html">Editors</a></li>
-              <li><a href="form-upload.html">File Upload</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="menu-toggle"
-              ><i class="zmdi zmdi-grid"></i><span>Tables</span>
-            </a>
-            <ul class="ml-menu">
-              <li><a href="normal-tables.html">Normal Tables</a></li>
-              <li><a href="jquery-datatable.html">Jquery Datatables</a></li>
-              <li><a href="editable-table.html">Editable Tables</a></li>
-              <li><a href="footable.html">Foo Tables</a></li>
-              <li><a href="table-color.html">Tables Color</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="menu-toggle"
-              ><i class="zmdi zmdi-chart"></i><span>Charts</span>
-            </a>
-            <ul class="ml-menu">
-              <li><a href="morris.html">Morris</a></li>
-              <li><a href="flot.html">Flot</a></li>
-              <li><a href="chartjs.html">ChartJS</a></li>
-              <li><a href="sparkline.html">Sparkline</a></li>
-              <li><a href="jquery-knob.html">Jquery Knob</a></li>
-            </ul>
-          </li>
-          <li class="header">EXTRA COMPONENTS</li>
-          <li>
-            <a href="javascript:void(0);" class="menu-toggle"
-              ><i class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span>
-            </a>
-            <ul class="ml-menu">
-              <li><a href="ec-dashboard.html">Dashboard</a></li>
-              <li><a href="ec-product.html">Product</a></li>
-              <li><a href="ec-product-List.html">Product List</a></li>
-              <li><a href="ec-product-detail.html">Product detail</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="menu-toggle"
-              ><i class="zmdi zmdi-delicious"></i><span>Widgets</span>
-            </a>
-            <ul class="ml-menu">
-              <li><a href="widgets-app.html">Apps Widgets</a></li>
-              <li><a href="widgets-data.html">Data Widgets</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="menu-toggle"
-              ><i class="zmdi zmdi-lock"></i><span>Authentication</span>
-            </a>
-            <ul class="ml-menu">
-              <li><a href="sign-in.html">Sign In</a></li>
-              <li><a href="sign-up.html">Sign Up</a></li>
-              <li><a href="forgot-password.html">Forgot Password</a></li>
-              <li><a href="404.html">Page 404</a></li>
-              <li><a href="500.html">Page 500</a></li>
-              <li><a href="page-offline.html">Page Offline</a></li>
-              <li><a href="locked.html">Locked Screen</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="menu-toggle"
-              ><i class="zmdi zmdi-copy"></i><span>Sample Pages</span>
-            </a>
-            <ul class="ml-menu">
-              <li><a href="blank.html">Blank Page</a></li>
-              <li><a href="image-gallery.html">Image Gallery</a></li>
-              <li><a href="profile.html">Profile</a></li>
-              <li><a href="timeline.html">Timeline</a></li>
-              <li><a href="pricing.html">Pricing</a></li>
-              <li><a href="invoices.html">Invoices</a></li>
-              <li><a href="search-results.html">Search Results</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="javascript:void(0);" class="menu-toggle"
-              ><i class="zmdi zmdi-map"></i><span>Maps</span>
-            </a>
-            <ul class="ml-menu">
-              <li><a href="google.html">Google Map</a></li>
-              <li><a href="yandex.html">YandexMap</a></li>
-              <li><a href="jvectormap.html">jVectorMap</a></li>
-            </ul>
-          </li>
-          <li class="header">Extra</li>
-          <li>
-            <div class="progress-container progress-primary m-t-10">
-              <span class="progress-badge">Traffic this Month</span>
-              <div class="progress">
-                <div
-                  class="progress-bar progress-bar-warning"
-                  role="progressbar"
-                  aria-valuenow="67"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  style="width: 67%"
-                >
-                  <span class="progress-value">67%</span>
-                </div>
-              </div>
-            </div>
-            <div class="progress-container progress-info">
-              <span class="progress-badge">Server Load</span>
-              <div class="progress">
-                <div
-                  class="progress-bar progress-bar-warning"
-                  role="progressbar"
-                  aria-valuenow="86"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  style="width: 86%"
-                >
-                  <span class="progress-value">86%</span>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </aside>
-
-    <!-- Right Sidebar -->
-    <aside id="rightsidebar" class="right-sidebar">
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" data-toggle="tab" href="#setting"
-            ><i class="zmdi zmdi-settings zmdi-hc-spin"></i
-          ></a>
+      <ul class="nav navbar-nav navbar-left">
+        <li>
+          <a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#activity">أخر الأخبار</a>
+        <li class="hidden-sm-down">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="البحث ...." />
+          </div>
         </li>
       </ul>
-      <div class="tab-content">
-        <div class="tab-pane active slideRight" id="setting">
-          <div class="slim_scroll">
-            <div class="card">
-              <h6>تغيير لون القائمة</h6>
-              <ul class="list-unstyled theme-light-dark">
-                <li>
-                  <div class="t-light btn btn-default btn-simple">مضيء</div>
-                </li>
-                <li>
-                  <div class="t-dark btn btn-default">مظلم</div>
-                </li>
-              </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i
+              class="zmdi zmdi-notifications"></i>
+            <div class="notify">
+              <span class="heartbit"></span><span class="point"></span>
             </div>
-          </div>
-        </div>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-right slideDown">
+            <li class="header">التنبيهات</li>
+            <li class="body">
+              <ul class="menu list-unstyled">
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="icon-circle bg-blue">
+                      <i class="zmdi zmdi-account"></i>
+                    </div>
+                    <div class="menu-info">
+                      <h4>إضافة بالمشروع الأول</h4>
+                      <p><i class="zmdi zmdi-time"></i> منذ 14 دقيقة</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="icon-circle bg-amber">
+                      <i class="zmdi zmdi-collection-bookmark"></i>
+                    </div>
+                    <div class="menu-info">
+                      <h4>تعديل بالمشروع الأول</h4>
+                      <p><i class="zmdi zmdi-time"></i> منذ 24 دقيقة</p>
+                    </div>
+                  </a>
+                </li>
 
-        <div class="tab-pane slideRight" id="activity">
-          <div class="slim_scroll">
-            <div class="card">
-              <h6>الأخبار</h6>
-              <ul class="list-unstyled activity">
                 <li>
-                  <a href="javascript:void(0)">
-                    <i class="zmdi zmdi-cake bg-blue"></i>
-                    <div class="info">
-                      <h4>افتتاح قاعة 1</h4>
-                      <small>يوم 12 يناير</small>
+                  <a href="javascript:void(0);">
+                    <div class="icon-circle bg-green">
+                      <i class="zmdi zmdi-edit"></i>
                     </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0)">
-                    <i class="zmdi zmdi-cake bg-blue"></i>
-                    <div class="info">
-                      <h4>افتتاح قاعة 1</h4>
-                      <small>يوم 12 يناير</small>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0)">
-                    <i class="zmdi zmdi-cake bg-blue"></i>
-                    <div class="info">
-                      <h4>افتتاح قاعة 1</h4>
-                      <small>يوم 12 يناير</small>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0)">
-                    <i class="zmdi zmdi-cake bg-blue"></i>
-                    <div class="info">
-                      <h4>افتتاح قاعة 1</h4>
-                      <small>يوم 12 يناير</small>
+                    <div class="menu-info">
+                      <h4>تعديل بالمشروع رقم 2</h4>
+                      <p><i class="zmdi zmdi-time"></i> منذ 24 دقيقة</p>
                     </div>
                   </a>
                 </li>
               </ul>
+            </li>
+            <li class="footer">
+              <a href="javascript:void(0);">مشاهدة كل التنبيهات</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i
+              class="zmdi zmdi-flag"></i>
+            <div class="notify">
+              <span class="heartbit"></span><span class="point"></span>
+            </div>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-right slideDown">
+            <li class="header">المهام</li>
+            <li class="body">
+              <ul class="menu tasks list-unstyled">
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="progress-container progress-info">
+                      <span class="progress-badge">المهمة رقم 1</span>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="35"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                          <span class="progress-value">35%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="progress-container progress-info">
+                      <span class="progress-badge">المهمة رقم 2</span>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="35"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                          <span class="progress-value">35%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="progress-container progress-info">
+                      <span class="progress-badge">المهمة رقم 3</span>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="35"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                          <span class="progress-value">35%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="progress-container progress-info">
+                      <span class="progress-badge">المهمة رقم 4</span>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="35"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+                          <span class="progress-value">35%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer">
+              <a href="javascript:void(0);">مشاهدة الكل</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i
+              class="zmdi zmdi-fullscreen"></i></a>
+        </li>
+        <li>
+          <a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i
+              class="zmdi zmdi-settings zmdi-hc-spin"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Left Sidebar -->
+  <aside id="leftsidebar" class="sidebar">
+    <div class="menu">
+      <ul class="list">
+        <li>
+          <div class="user-info">
+            <div class="image">
+              <a href="profile.html"><img src="assets/images/profile_av.jpg" alt="User" /></a>
+            </div>
+            <div class="detail">
+              <h4>محمد إبراهيم</h4>
+              <small>مقاول عام</small>
+            </div>
+            <a href="events.html" title="Events"><i class="zmdi zmdi-calendar"></i></a>
+            <a href="mail-inbox.html" title="Inbox"><i class="zmdi zmdi-email"></i></a>
+            <a href="contact.html" title="Contact List"><i class="zmdi zmdi-account-box-phone"></i></a>
+            <a href="chat.html" title="Chat App"><i class="zmdi zmdi-comments"></i></a>
+            <a href="sign-in.html" title="Sign out"><i class="zmdi zmdi-power"></i></a>
+          </div>
+        </li>
+
+        <li class="active"><a href="index.html" class=" waves-effect waves-block"><i
+              class="zmdi zmdi-accounts"></i><span>المستخدمين</span> </a> </li>
+      <li>
+        <li class="text-muted">---------------</li>
+
+          <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-settings"></i><span>المشاريع</span>
+          </a>
+          <ul class="ml-menu">
+            <li><a href="projects.html">قائمة المشاريع</a></li>
+            <li><a href="new_project.html">إضافة مشروع</a></li>
+          </ul>
+        </li>
+        <li class="text-muted">---------------</li>
+
+        <li>
+          <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-account-add"></i><span>مدير النظام</span>
+          </a>
+          <ul class="ml-menu">
+            <li><a href="projects.html">المدراء</a></li>
+            <li><a href="new_project.html">مستخدمي الجهات الخارجية</a></li>
+            <li><a href="new_project.html">اللوحة التفاعلية</a></li>
+            <li><a href="new_project.html">التقارير</a></li>
+            <li><a href="new_project.html">الملف الشخصي</a></li>
+
+          </ul>
+        </li>
+
+
+        <li>
+          <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-swap-alt"></i><span>User Interface
+              (UI)</span>
+          </a>
+          <ul class="ml-menu">
+            <li><a href="ui_kit.html">UI KIT</a></li>
+            <li><a href="alerts.html">Alerts</a></li>
+            <li><a href="collapse.html">Collapse</a></li>
+            <li><a href="colors.html">Colors</a></li>
+            <li><a href="dialogs.html">Dialogs</a></li>
+            <li><a href="icons.html">Icons</a></li>
+            <li><a href="list-group.html">List Group</a></li>
+            <li><a href="media-object.html">Media Object</a></li>
+            <li><a href="modals.html">Modals</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="progressbars.html">Progress Bars</a></li>
+            <li><a href="range-sliders.html">Range Sliders</a></li>
+            <li><a href="sortable-nestable.html">Sortable & Nestable</a></li>
+            <li><a href="tabs.html">Tabs</a></li>
+            <li><a href="waves.html">Waves</a></li>
+          </ul>
+        </li>
+        <li class="header">FORMS, CHARTS, TABLES</li>
+        <li>
+          <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Forms</span>
+          </a>
+          <ul class="ml-menu">
+            <li>
+              <a href="basic-form-elements.html">Basic Form Elements</a>
+            </li>
+            <li>
+              <a href="advanced-form-elements.html">Advanced Form Elements</a>
+            </li>
+            <li><a href="form-examples.html">Form Examples</a></li>
+            <li><a href="form-validation.html">Form Validation</a></li>
+            <li><a href="form-wizard.html">Form Wizard</a></li>
+            <li><a href="form-editors.html">Editors</a></li>
+            <li><a href="form-upload.html">File Upload</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-grid"></i><span>Tables</span>
+          </a>
+          <ul class="ml-menu">
+            <li><a href="normal-tables.html">Normal Tables</a></li>
+            <li><a href="jquery-datatable.html">Jquery Datatables</a></li>
+            <li><a href="editable-table.html">Editable Tables</a></li>
+            <li><a href="footable.html">Foo Tables</a></li>
+            <li><a href="table-color.html">Tables Color</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-chart"></i><span>Charts</span>
+          </a>
+          <ul class="ml-menu">
+            <li><a href="morris.html">Morris</a></li>
+            <li><a href="flot.html">Flot</a></li>
+            <li><a href="chartjs.html">ChartJS</a></li>
+            <li><a href="sparkline.html">Sparkline</a></li>
+            <li><a href="jquery-knob.html">Jquery Knob</a></li>
+          </ul>
+        </li>
+        <li class="header">EXTRA COMPONENTS</li>
+        <li>
+          <a href="javascript:void(0);" class="menu-toggle"><i
+              class="zmdi zmdi-shopping-cart"></i><span>Ecommerce</span>
+          </a>
+          <ul class="ml-menu">
+            <li><a href="ec-dashboard.html">Dashboard</a></li>
+            <li><a href="ec-product.html">Product</a></li>
+            <li><a href="ec-product-List.html">Product List</a></li>
+            <li><a href="ec-product-detail.html">Product detail</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-delicious"></i><span>Widgets</span>
+          </a>
+          <ul class="ml-menu">
+            <li><a href="widgets-app.html">Apps Widgets</a></li>
+            <li><a href="widgets-data.html">Data Widgets</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-lock"></i><span>Authentication</span>
+          </a>
+          <ul class="ml-menu">
+            <li><a href="sign-in.html">Sign In</a></li>
+            <li><a href="sign-up.html">Sign Up</a></li>
+            <li><a href="forgot-password.html">Forgot Password</a></li>
+            <li><a href="404.html">Page 404</a></li>
+            <li><a href="500.html">Page 500</a></li>
+            <li><a href="page-offline.html">Page Offline</a></li>
+            <li><a href="locked.html">Locked Screen</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-copy"></i><span>Sample Pages</span>
+          </a>
+          <ul class="ml-menu">
+            <li><a href="blank.html">Blank Page</a></li>
+            <li><a href="image-gallery.html">Image Gallery</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="invoices.html">Invoices</a></li>
+            <li><a href="search-results.html">Search Results</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-map"></i><span>Maps</span>
+          </a>
+          <ul class="ml-menu">
+            <li><a href="google.html">Google Map</a></li>
+            <li><a href="yandex.html">YandexMap</a></li>
+            <li><a href="jvectormap.html">jVectorMap</a></li>
+          </ul>
+        </li>
+        <li class="header">Extra</li>
+        <li>
+          <div class="progress-container progress-primary m-t-10">
+            <span class="progress-badge">Traffic this Month</span>
+            <div class="progress">
+              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="67" aria-valuemin="0"
+                aria-valuemax="100" style="width: 67%">
+                <span class="progress-value">67%</span>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </aside>
-    <!-- Main Content -->
-    <section class="content home">
-      <div class="block-header">
-        <div class="row">
-          <div class="col-lg-7 col-md-6 col-sm-12">
-            <h2>
-              لوحة التحكم
-              <small class="text-muted">نظام إدارة المشاريع</small>
-            </h2>
+          <div class="progress-container progress-info">
+            <span class="progress-badge">Server Load</span>
+            <div class="progress">
+              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="86" aria-valuemin="0"
+                aria-valuemax="100" style="width: 86%">
+                <span class="progress-value">86%</span>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-5 col-md-6 col-sm-12">
-            <ul class="breadcrumb float-md-left">
-              <li class="breadcrumb-item">
-                <a href="index.html"><i class="zmdi zmdi-home"></i> الرئيسية</a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Right Sidebar -->
+  <aside id="rightsidebar" class="right-sidebar">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#setting"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#activity">لون القائمة</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active slideRight" id="setting">
+        <div class="slim_scroll">
+          <div class="card">
+            <h6>تغيير لون القائمة</h6>
+            <ul class="list-unstyled theme-light-dark">
+              <li>
+                <div class="t-light btn btn-default btn-simple">مضيء</div>
               </li>
-              <li class="breadcrumb-item active"> المستخدمين</li>
+              <li>
+                <div class="t-dark btn btn-default btn-simple">مظلم</div>
+              </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="container-fluid">
-        <div class="card widget_2">
-          <ul class="row clearfix list-unstyled m-b-0">
-            <li class="col-md-6">
-              <div class="body">
-                <div class="row">
-                  <div class="col-7">
-                    <h6 class="m-t-0">عدد المستخدمين</h6>
-                  </div>
-                  <div class="col-5">
-                    <h5>20</h5>
-                  </div>
-                  <div class="col-12">
-                    <div class="progress m-t-20">
-                      <div
-                        class="progress-bar l-parpl"
-                        role="progressbar"
-                        aria-valuenow="45"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style="width: 45%"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="col-md-6">
-              <div class="body">
-                <div class="row">
-                 
-                  <div class="col-7">
-                    <h6 class="m-t-0">أخر تحديث</h6>
-                  </div>
 
-                  <div class="col-5">
-                    <h5>25/12/2020</h5>
+      <div class="tab-pane slideRight" id="activity">
+        <div class="slim_scroll">
+          <div class="card">
+            <h6>الأخبار</h6>
+            <ul class="list-unstyled activity">
+              <li>
+                <a href="javascript:void(0)">
+                  <i class="zmdi zmdi-cake bg-blue"></i>
+                  <div class="info">
+                    <h4>افتتاح قاعة 1</h4>
+                    <small>يوم 12 يناير</small>
                   </div>
-                  <div class="col-12">
-                    <div class="progress m-t-20">
-                      <div
-                        class="progress-bar l-turquoise"
-                        role="progressbar"
-                        aria-valuenow="89"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style="width: 89%"
-                      ></div>
-                    </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <i class="zmdi zmdi-cake bg-blue"></i>
+                  <div class="info">
+                    <h4>افتتاح قاعة 1</h4>
+                    <small>يوم 12 يناير</small>
                   </div>
-                </div>
-              </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <i class="zmdi zmdi-cake bg-blue"></i>
+                  <div class="info">
+                    <h4>افتتاح قاعة 1</h4>
+                    <small>يوم 12 يناير</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <i class="zmdi zmdi-cake bg-blue"></i>
+                  <div class="info">
+                    <h4>افتتاح قاعة 1</h4>
+                    <small>يوم 12 يناير</small>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <!-- Main Content -->
+  <section class="content home">
+    <div class="block-header">
+      <div class="row">
+        <div class="col-lg-7 col-md-6 col-sm-12">
+          <h2>
+            لوحة التحكم
+            <small class="text-muted">نظام إدارة المشاريع</small>
+          </h2>
+        </div>
+        <div class="col-lg-5 col-md-6 col-sm-12">
+          <ul class="breadcrumb float-md-left">
+            <li class="breadcrumb-item">
+              <a href="index.html"><i class="zmdi zmdi-home"></i> الرئيسية</a>
             </li>
-            <li class="col-md-6">
-              <div class="body">
-                <div class="row">
-                  <div class="col-7">
-                    <h6 class="m-t-0">عدد المشاريع</h6>
-                  </div>
-                  <div class="col-5">
-                    <h5>2</h5>
-                  </div>
-                  <div class="col-12">
-                    <div class="progress m-t-20">
-                      <div
-                        class="progress-bar l-parpl"
-                        role="progressbar"
-                        aria-valuenow="39"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style="width: 39%"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="col-md-6">
-              <div class="body">
-                <div class="row">
-                 
-                  <div class="col-7">
-                    <h6 class="m-t-0">عدد المستخدمين المحظورين</h6>
-                  </div>
-
-                  <div class="col-5">
-                    <h5>8</h5>
-                  </div>
-                  <div class="col-12">
-                    <div class="progress m-t-20">
-                      <div
-                        class="progress-bar l-turquoise"
-                        role="progressbar"
-                        aria-valuenow="89"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style="width: 89%"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
+            <li class="breadcrumb-item active"> المستخدمين</li>
           </ul>
         </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row clearfix">
+        <div class="col-lg-12">
+          <div class="card">
+            <ul class="row profile_state list-unstyled">
+              <li class="col-lg-3 col-md-3 col-6">
+                <div class="body">
+                  <i class="zmdi zmdi-accounts text-success"></i>
+                  <h6>عدد المستخدمين </h6>
+                  <p>2</p>
+                  <div class="progress m-t-20">
+                    <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="45" aria-valuemin="0"
+                      aria-valuemax="100" style="width: 45%"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-lg-3 col-md-3 col-6">
+                <div class="body">
+                  <i class="zmdi zmdi-block text-danger"></i>
+                  <h6>عدد المستخدمين المحظورين</h6>
+                  <span>1</span>
+                  <div class="progress m-t-20">
+                    <div class="progress-bar l-turquoise" role="progressbar" aria-valuenow="89" aria-valuemin="0"
+                      aria-valuemax="100" style="width: 89%"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-lg-3 col-md-3 col-6">
+                <div class="body">
+                  <i class="zmdi zmdi-alarm-check text-success"></i>
+                  <h6>أخر تحديث</h6>
+                  <p>25/12/2020 </p>
+                  <div class="progress m-t-20">
+                    <div class="progress-bar l-turquoise" role="progressbar" aria-valuenow="89" aria-valuemin="0"
+                      aria-valuemax="100" style="width: 89%"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-lg-3 col-md-3 col-6">
+                <div class="body">
+                  <i class="zmdi zmdi-settings text-success"></i>
+                  <h6>عدد المشاريع</h6>
+                  <span>5</span>
+                  <div class="progress m-t-20">
+                    <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="39" aria-valuemin="0"
+                      aria-valuemax="100" style="width: 39%"></div>
+                  </div>
+                </div>
+              </li>
 
-        <div class="row clearfix">
-          <div class="col-lg-12">
-            <div class="card action_bar">
-              <div class="body">
-                <div class="header">
-                  <h2>الصلاحيات والمستخدمين</h2>                        
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row clearfix">
+        <div class="col-lg-12">
+          <div class="card action_bar">
+            <div class="body">
+              <div class="header">
+                <h2>الصلاحيات والمستخدمين</h2>
               </div>
-                <div class="row clearfix">
-            
-                  <div class="col-md-2">
-                    <div class="checkbox inlineblock delete_all">
-                      <input id="deleteall" type="checkbox" />
-                      <label for="deleteall"> الكل </label>
-                    </div>
+              <div class="row clearfix">
+
+                <div class="col-md-2">
+                  <div class="checkbox inlineblock delete_all">
+                    <input id="deleteall" type="checkbox" />
+                    <label for="deleteall"> الكل </label>
                   </div>
-                  <div class="col-md-5">
-                    <div class="input-group search">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="بحث ..."
-                      />
-                    </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="input-group search">
+                    <input type="text" class="form-control" placeholder="بحث ..." />
                   </div>
-                  <div class="col-md-5">
-                    <div class="btn-group hidden-sm-down">
-                      <button
-                        type="button"
-                        class="btn btn-simple btn-info dropdown-toggle"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        فرز<span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu dropdown-menu-right slideDown">
-                        <li><a href="javascript:void(0);">إسم المستخدم</a></li>
-                        <li><a href="javascript:void(0);">تاريخ الإضافة</a></li>
-                        <li><a href="javascript:void(0);">الصلاحية</a></li>
-                      </ul>
-                    </div>
-                    <span class="m-r-10 col-green">إضافة مستخدم</span>
-                    <button
-                      type="button"
-                      class="btn btn-success btn-icon btn-icon-mini hidden-sm-down slideDown"
-                      data-toggle="modal"
-                      data-target="#userModal"
-                    >
-                      <i class="zmdi zmdi-plus-circle"></i>
+                </div>
+                <div class="col-md-5">
+                  <div class="btn-group hidden-sm-down">
+                    <button type="button" class="btn btn-simple btn-info dropdown-toggle" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      فرز<span class="caret"></span>
                     </button>
+                    <ul class="dropdown-menu dropdown-menu-right slideDown">
+                      <li><a href="javascript:void(0);">إسم المستخدم</a></li>
+                      <li><a href="javascript:void(0);">تاريخ الإضافة</a></li>
+                      <li><a href="javascript:void(0);">الصلاحية</a></li>
+                    </ul>
                   </div>
-                  <!-- 
+                  <span class="m-r-10 m-l-10 text-green">إضافة مستخدم</span>
+                  <button type="button" class="btn btn-success btn-icon btn-icon-mini hidden-sm-down slideDown"
+                    data-toggle="modal" data-target="#userModal">
+                    <i class="zmdi zmdi-plus-circle"></i>
+                  </button>
+                </div>
+                <!-- 
                   <div class="col-md-2">
-                    
                       <p>إضافة مستخدم جديد 
                         <button class="btn btn-success btn-icon btn-round hidden-sm-down m-r-10" type="button"> 
                       <i class="zmdi zmdi-plus"></i>
                     </button>
                   </p>
                   </div> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row clearfix js-sweetalert">
-          <div class="col-lg-12">
-            <div class="card">
-              <div class="body table-responsive">
-                <table class="table table-hover table-striped m-b-0">
-                  <thead class="l-turquoise">
-                    <tr>
-                      <th>#</th>
-                      <th>رقم الهوية</th>
-                      <th>اسم المستخدم</th>
-                      <th>تاريخ الإضافة</th>
-                      <th>عدد المشاريع المضافة/المحدثة</th>
-                      <th>حظر</th>
-                      <th>الصلاحيات</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="checkbox">
-                          <input id="delete_2" type="checkbox" />
-                          <label for="delete_2">&nbsp;</label>
-                        </div>
-                      </td>
-                      <td>2317949979</td>
-                      <td>محمد إبراهيم محمد</td>
-                      <td>25/3/2020</td>
-                      <td><span class="badge badge-success">3</span></td>
-                      <td>
-                        <button class="btn btn-danger btn-sm" data-type="cancel">حظر</button>
-                      </td>
-                      <td class="d-flex flex-row">
-                        <button class="btn btn-info btn-icon btn-simple btn-icon-mini m-l-5" data-toggle="modal" data-target="#userModal">
-                          <i class="zmdi zmdi-edit"></i>
-                        </button>
-
-                
-                        <button
-                          class="btn btn-danger btn-icon btn-simple btn-icon-mini m-l-5"  data-type="cancel"
-                        >
-                          <i class="zmdi zmdi-delete"></i>
-                        </button>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <div class="checkbox">
-                          <input id="delete_1" type="checkbox" />
-                          <label for="delete_1">&nbsp;</label>
-                        </div>
-                      </td>
-                      <td>2317949979</td>
-                      <td>محمد إبراهيم محمد</td>
-                      <td>25/3/2020</td>
-                      <td><span class="badge badge-success">3</span></td>
-                      <td>
-                        <button class="btn btn-danger btn-sm" data-type="cancel">حظر</button>
-                      </td>
-                      <td class="d-flex flex-row">
-                        <button class="btn btn-info btn-icon btn-simple btn-icon-mini m-l-5" data-toggle="modal" data-target="#userModal">
-                          <i class="zmdi zmdi-edit"></i>
-                        </button>
-                        <button
-                          class="btn btn-danger btn-icon btn-simple btn-icon-mini m-l-5" data-type="cancel"
-                        >
-                          <i class="zmdi zmdi-delete"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="card">
-              <div class="body">
-                <ul class="pagination pagination-primary m-b-0">
-                  <li class="page-item">
-                    <a class="page-link" href="#"
-                      ><i class="zmdi zmdi-arrow-left"></i
-                    ></a>
-                  </li>
-                  <li class="page-item active">
-                    <a class="page-link" href="#">1</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">4</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#"
-                      ><i class="zmdi zmdi-arrow-right"></i
-                    ></a>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <div class="modal fade" id="userModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-lg slideDown" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="text-info">إضافة مستخدم جديد</h5>
+      <div class="row clearfix js-sweetalert">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="body table-responsive">
+              <table class="table table-hover table-striped m-b-0">
+                <thead class="l-turquoise">
+                  <tr>
+                    <th>#</th>
+                    <th>رقم الهوية</th>
+                    <th>اسم المستخدم</th>
+                    <th>تاريخ الإضافة</th>
+                    <th>عدد المشاريع المضافة/المحدثة</th>
+                    <th>حظر</th>
+                    <th>الصلاحيات</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <input id="delete_2" type="checkbox" />
+                        <label for="delete_2">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>2317949979</td>
+                    <td>محمد إبراهيم محمد</td>
+                    <td>25/3/2020</td>
+                    <td><span class="badge badge-success">3</span></td>
+                    <td>
+                      <button class="btn btn-danger btn-sm" data-type="cancel">حظر</button>
+                    </td>
+                    <td class="d-flex flex-row">
+                      <button class="btn btn-info btn-icon btn-simple btn-icon-mini m-l-5" data-toggle="modal"
+                        data-target="#userModal">
+                        <i class="zmdi zmdi-edit"></i>
+                      </button>
+                      <button class="btn btn-danger btn-icon btn-simple btn-icon-mini m-l-5" data-type="cancel">
+                        <i class="zmdi zmdi-delete"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="checkbox">
+                        <input id="delete_1" type="checkbox" />
+                        <label for="delete_1">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>2317949979</td>
+                    <td>محمد إبراهيم محمد</td>
+                    <td>25/3/2020</td>
+                    <td><span class="badge badge-success">3</span></td>
+                    <td>
+                      <button class="btn btn-danger btn-sm" data-type="cancel">حظر</button>
+                    </td>
+                    <td class="d-flex flex-row">
+                      <button class="btn btn-info btn-icon btn-simple btn-icon-mini m-l-5" data-toggle="modal"
+                        data-target="#userModal">
+                        <i class="zmdi zmdi-edit"></i>
+                      </button>
+                      <button class="btn btn-danger btn-icon btn-simple btn-icon-mini m-l-5" data-type="cancel">
+                        <i class="zmdi zmdi-delete"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <div class="modal-body">
-            <form>
-              <div class="row clearfix">
-                <div class="col-md-4">
-                  <label for="email_address">الإسم الأول</label>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="الإسم الأول"
-                    />
-                  </div>
+          <div class="card">
+            <div class="body">
+              <ul class="pagination pagination-primary m-b-0">
+                <li class="page-item">
+                  <a class="page-link" href="#"><i class="zmdi zmdi-arrow-left"></i></a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#"><i class="zmdi zmdi-arrow-right"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="modal fade" id="userModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg slideDown" role="document">
+      <div class="modal-content card">
+       
+        <div class="modal-body">
+          <div class="header">
+            <h2>إضافة مستخدم جديد</h2>
+          </div>
+          <form class="form_validation" method="POST">
+            <div class="row clearfix">
+              <div class="col-md-4">
+                <label for="email_address">الإسم الأول</label>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="الإسم الأول" required>
                 </div>
-                <div class="col-md-4">
-                  <label for="email_address">الإسم الثاني</label>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="الإسم الثاني"
-                    />
-                  </div>
-                </div>
-
-                <div class="col-md-4">
-                  <label for="email_address">إسم العائلة</label>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="إسم العائلة"
-                    />
-                  </div>
+              </div>
+              <div class="col-md-4">
+                <label for="email_address">الإسم الثاني</label>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="الإسم الثاني" required>
                 </div>
               </div>
 
-              <div class="row clearfix">
-                <div class="col-md-6">
-                  <label for="email_address">رقم الجوال</label>
-                  <div class="form-group">
-                    <input
-                      type="number"
-                      class="form-control"
-                      placeholder="رقم الجوال"
-                    />
-                  </div>
+              <div class="col-md-4">
+                <label for="email_address">إسم العائلة</label>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="إسم العائلة" required  >
                 </div>
-                <div class="col-md-6">
-                  <label for="email_address">رقم الهوية</label>
-                  <div class="form-group">
-                    <input
-                      type="number"
-                      class="form-control"
-                      placeholder="رقم الهوية"
-                    />
+              </div>
+            </div>
+
+            <div class="row clearfix">
+              <div class="col-md-6">
+                <label for="email_address">رقم الجوال</label>
+                <div class="form-group">
+                  <input type="number" class="form-control" placeholder="رقم الجوال" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="email_address">رقم الهوية</label>
+                <div class="form-group">
+                  <input type="number" class="form-control" placeholder="رقم الهوية" />
+                </div>
+              </div>
+            </div>
+
+            <div class="row clearfix">
+              <div class="col-md-6">
+                <label for="email_address">كلمة السر</label>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="كلمة السر" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="email_address">تأكيد كلمة السر</label>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="تأكيد كلمة السر" />
+                </div>
+              </div>
+            </div>
+            <div class="row clearfix">
+              <div class="col-md-12">
+                <hr>
+                <label>صلاحيات المستخدم</label>
+                <div class="form-group">
+                  <div class="checkbox form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                    <label class="form-check-label" for="inlineCheckbox1">إضافة</label>
+                  </div>
+                  <div class="checkbox form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
+                    <label class="form-check-label" for="inlineCheckbox2">تحديث</label>
+                  </div>
+
+                  <div class="checkbox form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1" />
+                    <label class="form-check-label" for="inlineCheckbox3">حذف</label>
+                  </div>
+                  <div class="checkbox form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2" />
+                    <label class="form-check-label" for="inlineCheckbox4">الكل</label>
                   </div>
                 </div>
               </div>
-
-              <div class="row clearfix">
-                <div class="col-md-6">
-                  <label for="email_address">كلمة السر</label>
-                  <div class="form-group">
-                    <input
-                      type="password"
-                      class="form-control"
-                      placeholder="كلمة السر"
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <label for="email_address">تأكيد كلمة السر</label>
-                  <div class="form-group">
-                    <input
-                      type="password"
-                      class="form-control"
-                      placeholder="تأكيد كلمة السر"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="row clearfix">
-                
-                <div class="col-md-12">
-                  <hr>
-
-               <label>صلاحيات المستخدم</label>
-
-                  <div class="form-group">
-                    <div class="checkbox form-check-inline">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="inlineCheckbox1"
-                        value="option1"
-                      />
-                      <label class="form-check-label" for="inlineCheckbox1"
-                        >إضافة</label
-                      >
-                    </div>
-                    <div class="checkbox form-check-inline">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="inlineCheckbox2"
-                        value="option2"
-                      />
-                      <label class="form-check-label" for="inlineCheckbox2"
-                        >تحديث</label
-                      >
-                    </div>
-
-                    <div class="checkbox form-check-inline">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="inlineCheckbox3"
-                        value="option1"
-                      />
-                      <label class="form-check-label" for="inlineCheckbox3"
-                        >حذف</label
-                      >
-                    </div>
-                    <div class="checkbox form-check-inline">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="inlineCheckbox4"
-                        value="option2"
-                      />
-                      <label class="form-check-label" for="inlineCheckbox4"
-                        >الكل</label
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- <label for="password">Password</label>
+            </div>
+            <!-- <label for="password">Password</label>
                   <div class="form-group">                                
                       <input type="password" id="password" class="form-control" placeholder="Enter your password">
                   </div>
@@ -983,30 +772,32 @@
                               Remember Me
                       </label>
                   </div> -->
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-success waves-effect">
-              SAVE CHANGES
-            </button>
-            <button
-              type="button"
-              class="btn btn-danger waves-effect"
-              data-dismiss="modal"
-            >
-              CLOSE
-            </button>
-          </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-success waves-effect">
+                      حفظ
+                    </button>
+                    <button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">
+                      إلغاء
+                    </button>
+                  </div>
+          </form>
         </div>
+   
       </div>
     </div>
-    <!-- Jquery Core Js -->
-    <script src="assets/bundles/libscripts.bundle.js"></script>
-    <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
-    <script src="assets/bundles/vendorscripts.bundle.js"></script>
-    <!-- Sparkline Plugin Js -->
-    <script src="assets/bundles/mainscripts.bundle.js"></script>
-    <script src="assets/plugins/sweetalert/sweetalert.min.js"></script>
-    <script src="assets/js/pages/ui/dialogs.js"></script>
-  </body>
+  </div>
+  <!-- Jquery Core Js -->
+  <script src="assets/bundles/libscripts.bundle.js"></script>
+  <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
+  <script src="assets/bundles/vendorscripts.bundle.js"></script>
+  <!-- Sparkline Plugin Js -->
+  <script src="assets/bundles/mainscripts.bundle.js"></script>
+  <script src="assets/plugins/sweetalert/sweetalert.min.js"></script>
+  <script src="assets/js/pages/ui/dialogs.js"></script>
+  <script src="assets/bundles/datatablescripts.bundle.js"></script>
+  <script src="assets/js/pages/tables/jquery-datatable.js"></script>
+  <script src="assets/plugins/ion-rangeslider/js/ion.rangeSlider.js"></script> <!-- RangeSlider Plugin Js -->
+  <script src="assets/js/pages/ui/range-sliders.js"></script> <!-- Custom Js -->
+</body>
+
 </html>
