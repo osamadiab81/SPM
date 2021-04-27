@@ -17,6 +17,11 @@ body.rtl,
   direction: rtl;
   text-align: right;
 }
+input.knob.dial1{
+  margin-right: -107px;
+
+}
+
 .breadcrumb {
   padding: 0.75rem 1rem !important;
 }
