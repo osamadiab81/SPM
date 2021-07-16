@@ -13746,7 +13746,7 @@ img {
   border-radius: 50px;
 }
 .menu_dark .sidebar {
-  background: #032c32;
+  background: #054952;
 }
 .menu_dark .sidebar .user-info {
   border-bottom: 1px solid #37474f;
@@ -13761,7 +13761,7 @@ img {
   color: #78909c;
 }
 .menu_dark .navbar-header {
-  background: #032c32;
+  background: #054952;
 }
 @media (max-width: 1169px) {
   .sidebar {
@@ -15546,7 +15546,7 @@ section.content {
   color: #fff !important;
 }
 .l-blue {
-  background: linear-gradient(45deg, #72c2ff, #86f0ff) !important;
+  background: linear-gradient(45deg, #72c2ff, #0491a7) !important;
   color: #fff !important;
 }
 .l-seagreen {
