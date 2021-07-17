@@ -44,7 +44,9 @@ direction: ltr i !important;
   margin-right: 0px;
 }
 .rtl section.content {
-  margin: 60px 250px 0px 0px;
+  background-image: url(../images/bg.png);
+  background-repeat: repeat fixed top left;
+  margin: 80px 250px 0px 0px;
 }
 .rtl .right-sidebar {
   left: -300px;
@@ -81,7 +83,7 @@ direction: ltr i !important;
   float: right;
   padding-right: 15px;
   padding-left: 0;
-  /* background: #5e686403; */
+  background-color: #f7f7f7
 }
 .rtl .navbar .navbar-header .navbar-brand {
   margin-right: 0px;

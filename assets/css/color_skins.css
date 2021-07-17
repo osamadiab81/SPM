@@ -1,18 +1,18 @@
 .theme-cyan .profile-page .profile-sub-header .box-list ul li a:hover,
 .theme-cyan .menu > ul > li > ul.normal-sub > li a:hover,
 .theme-cyan .menu > ul > li > ul > li > ul > li a:hover {
-  background-color: #00bcd4;
+  background-color: #289067;
 }
 .theme-cyan .navbar-brand {
-  color: #00bcd4 !important;
+  color: #fff !important;
 }
 .theme-cyan .navbar-brand:hover,
 .theme-cyan .navbar-brand:active,
 .theme-cyan .navbar-brand:focus {
-  color: #00bcd4;
+  color: #289067;
 }
 .theme-cyan .navbar {
-  background: linear-gradient(201deg, #00bcd4, #0e7886);
+  background: linear-gradient(201deg, #289067, #177354);
 }
 .theme-cyan .nav > li > a {
   color: #fff;
@@ -36,20 +36,20 @@
 }
 .theme-cyan .sidebar .menu .list li.active > :first-child i,
 .theme-cyan .sidebar .menu .list li.active > :first-child span {
-  color: #00bcd4;
+  color: #289067;
 }
 .theme-cyan .sidebar .menu .list a:hover {
-  color: #00bcd4;
+  color: #289067;
 }
 .theme-cyan .checkbox input[type="checkbox"]:checked + label::after {
-  border: 1px solid #00bcd4;
+  border: 1px solid #289067;
 }
 .theme-cyan .inbox-widget .inbox-inner:hover .inbox-img img {
-  border: 2px solid #00bcd4;
+  border: 2px solid #289067;
   transition: all 150ms linear;
 }
 /* .theme-cyan .nav-tabs .nav-link.active {
-  border: 1px solid #00bcd4 !important;
+  border: 1px solid #289067 !important;
 } */
 .theme-cyan .card .header h2:before {
   background: #00a69c;
@@ -61,5 +61,5 @@
   color: #00a69c;
 }
 .theme-cyan .blog-page .single-blog-post .img-holder .date-box {
-  background-color: #00bcd4;
+  background-color: #289067;
 }
