@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Cairo:400,600,700");
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 body.rtl,
 .rtl.authentication .col-md-12,
 .m-r-5,
@@ -11,7 +11,7 @@ body.rtl,
 .rtl .dropdown-menu .header ,
 .sweet-alert h2, .sweet-alert button, .sweet-alert p, ::placeholder,
 .rtl .navbar a:not(.btn):not(.dropdown-item){
-  font-family: "Cairo", sans-serif !important;
+  font-family: "Tajawal", sans-serif !important;
 }
 .rtl, .rtl .header-dropdown li .dropdown-menu li a {
   direction: rtl;
