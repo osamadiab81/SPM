@@ -12,7 +12,7 @@ $.AdminCompass.options = {
         indigo: '#3F51B5',
         blue: '#2196f3',
         lightBlue: '#03A9F4',
-        cyan: '#00bcd4',
+        cyan: '#289067',
         green: '#4CAF50',
         lightGreen: '#8BC34A',
         yellow: '#ffe821',

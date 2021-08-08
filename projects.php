@@ -1,3 +1,4 @@
+<<<<<<< HEAD:projects.php
 ﻿<?php include('./header.php') ?> 
     <!-- Left Sidebar -->
     <aside id="leftsidebar" class="sidebar">
@@ -145,6 +146,9 @@
         </div>
       </div>
     </aside>
+=======
+﻿<?php include('./header.php') ?>
+>>>>>>> 09156a70973e2f15750c29ecb506073b3fe7a6d2:projects.html
 
     <section class="content">
       <div class="block-header">
@@ -155,7 +159,7 @@
           <div class="col-lg-5 col-md-6 col-sm-12">
             <ul class="breadcrumb float-md-left">
               <li class="breadcrumb-item">
-                <a href="index.html"><i class="zmdi zmdi-home"></i> الرئيسية</a>
+                <a href="index.php"><i class="zmdi zmdi-home"></i> الرئيسية</a>
               </li>
               <li class="breadcrumb-item active">المشاريع</li>
             </ul>
@@ -705,17 +709,4 @@
         </div>
       </div>
     </div>
-  <!-- Jquery Core Js -->
-  <script src="assets/bundles/libscripts.bundle.js"></script>
-  <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
-  <script src="assets/bundles/vendorscripts.bundle.js"></script>
-  <!-- Sparkline Plugin Js -->
-  <script src="assets/bundles/mainscripts.bundle.js"></script>
-  <script src="assets/plugins/sweetalert/sweetalert.min.js"></script>
-  <script src="assets/js/pages/ui/dialogs.js"></script>
-  <script src="assets/bundles/datatablescripts.bundle.js"></script>
-  <script src="assets/js/pages/tables/jquery-datatable.js"></script>
-  <script src="assets/plugins/ion-rangeslider/js/ion.rangeSlider.js"></script> <!-- RangeSlider Plugin Js -->
-  <script src="assets/js/pages/ui/range-sliders.js"></script> <!-- Custom Js -->
-  </body>
-</html>
+    <?php include('./footer.php') ?>

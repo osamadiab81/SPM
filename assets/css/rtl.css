@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Cairo:400,600,700");
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 body.rtl,
 .rtl.authentication .col-md-12,
 .m-r-5,
@@ -11,7 +11,7 @@ body.rtl,
 .rtl .dropdown-menu .header ,
 .sweet-alert h2, .sweet-alert button, .sweet-alert p, ::placeholder,
 .rtl .navbar a:not(.btn):not(.dropdown-item){
-  font-family: "Cairo", sans-serif !important;
+  font-family: "Tajawal", sans-serif !important;
 }
 .rtl, .rtl .header-dropdown li .dropdown-menu li a {
   direction: rtl;
@@ -44,7 +44,9 @@ direction: ltr i !important;
   margin-right: 0px;
 }
 .rtl section.content {
-  margin: 60px 250px 0px 0px;
+  background-image: url(../images/bg.png);
+  background-repeat: repeat fixed top left;
+  margin: 80px 250px 0px 0px;
 }
 .rtl .right-sidebar {
   left: -300px;
@@ -81,7 +83,7 @@ direction: ltr i !important;
   float: right;
   padding-right: 15px;
   padding-left: 0;
-  /* background: #5e686403; */
+  background-color: #f7f7f7
 }
 .rtl .navbar .navbar-header .navbar-brand {
   margin-right: 0px;

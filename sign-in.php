@@ -7,8 +7,16 @@
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
           name="viewport"
         />
+<<<<<<< HEAD:sign-in.php
         <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit."/>
         <title>نظام إدارة المشاريع</title>
+=======
+        <meta
+          name="description"
+          content="Responsive Bootstrap 4 and web Application ui kit."
+        />
+        <title>نظام متابعة المشاريع</title>
+>>>>>>> 09156a70973e2f15750c29ecb506073b3fe7a6d2:sign-in.html
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <!-- Favicon-->
         <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
@@ -24,7 +32,7 @@
 <nav class="navbar text-center">
     <div class="container">        
         <div class="col-md-12">
-            <h5 class="text-white">نظام إدارة المشاريع</h5 class="text-white">
+            <h5 class="text-white">نظام متابعة المشاريع</h5 class="text-white">
         </div>
     </div>
 </nav>
@@ -53,7 +61,7 @@
                   placeholder="كلمة السر"
                 />
                     <div class="footer text-center">
-                        <a href="index.html" class="btn l-cyan btn-round btn-lg btn-block waves-effect waves-light">تسجيل الدخول</a>
+                        <a href="index.php" class="btn l-cyan btn-round btn-lg btn-block waves-effect waves-light">تسجيل الدخول</a>
                         <h6 class="m-t-20"><a href="forgot-password.html" class="link">
                             نسيت كلمة السر ؟
                         </a></h6>
